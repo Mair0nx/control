@@ -11,9 +11,12 @@ func main() {
 
 	var card types.Card
 
-	card.Activity = true
+	//Карта, статус которой активен || Не активен
+	card.Activity = false
 
-	control.Control(card)
+	//Вызов конкретной карты в функцию и смена её значения
+	control.Control(&card)
 
+	//Вывод форматированного статуска карты
 	fmt.Printf("%+v", card)
 }
